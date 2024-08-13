@@ -139,3 +139,21 @@ footer p {
     font-size: 0.8em;
     color: #ddd;
 }
+
+
+.footer-link {
+    color: white;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.footer-link:hover {
+    opacity: 0.8;
+}
+
+.linkedin-logo {
+    width: 20px; /* Adjust size as needed */
+    vertical-align: middle;
+    margin-left: 5px;
+}
