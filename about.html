@@ -5,11 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yehuntech - About Us</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.team-member').forEach(member => {
+                member.addEventListener('click', () => {
+                    member.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+    <style>
+        .linkedin-logo {
+            width: 20px; /* Adjust size as needed */
+            vertical-align: middle;
+            margin-left: 5px;
+        }
+        .team-member a {
+            color: white;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+        }
+        .team-member a:hover .linkedin-logo {
+            opacity: 0.7;
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1 href="index.html">Yehuntech</h1>
+            <h1>Yehuntech</h1>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -21,11 +46,53 @@
         </div>
     </header>
 
-    <section id="services">
-        <div class="service-container">
+    <section id="about">
+        <div class="container">
+            <h2>Meet Our Team</h2>
+            <p>Yehuntech is created by experts in blockchain and other software technologies.</p>
 
-            <h2>Yehuntech is led by a PhD candidate with over 4 years of experience in AI, Blockchain, and Fullstack development technologies. Our team also includes experts from the EU, Ethiopia, and the USA, bringing a wealth of knowledge and innovation to our projects.</h2>        </div>
-
+            <div class="team">
+                <div class="team-member">
+                    <div class="image-container">
+                        <img src="photo.jpg" alt="Bereket Gebredengel">
+                    </div>
+                    <div class="info">
+                        <div class="name">Bereket Gebredengel</div>
+                        <div class="role">Lead Developer</div>
+                        <div class="description">An experienced full-stack blockchain developer with over 5 years in the field.</div>
+                        <a href="https://www.linkedin.com/in/bereket-gebredingle-382a39141/" target="_blank">
+                            LinkedIn Profile
+                            <img src="linkedin.png" alt="LinkedIn Logo" class="linkedin-logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="image-container">
+                        <img src="photo2.jpg" alt="Yitbarek Yohannes">
+                    </div>
+                    <div class="info">
+                        <div class="name">Yitbarek Yohannes</div>
+                        <div class="role">Cryptocurrency Analyst</div>
+                        <div class="description">A PhD student in Blockchain with more than 4 years of experience as a backend engineer.</div>
+                        <a href="https://www.linkedin.com/in/yitbarek-yohannes-7b044714b/" target="_blank">
+                            LinkedIn Profile
+                            <img src="linkedin.png" alt="LinkedIn Logo" class="linkedin-logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="image-container">
+                        <img src="photo3.png" alt="Henok Abebe">
+                    </div>
+                    <div class="info">
+                        <div class="name">Henok Abebe</div>
+                        <div class="role">Full Stack Engineer</div>
+                        <div class="description">A software engineer specializing in scraping and full-stack development.</div>
+                        <!-- Optionally add a LinkedIn profile for Henok Abebe if available -->
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <footer>

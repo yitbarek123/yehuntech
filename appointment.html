@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment - Yehuntech</title>
+    <link rel="stylesheet" href="new.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Yehuntech</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="appointment.html">Book Appointment</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="appointment">
+        <div class="container">
+            <h1>Book an Appointment</h1>
+            <form id="appointment-form">
+                <input type="text" id="name" name="name" placeholder="Name" required>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <input type="text" id="phone" name="phone" placeholder="Phone Number" required>
+                <textarea id="message" name="message" rows="4" placeholder="Message or Details" required></textarea>
+                <button type="submit" class="cta-button">Book Now</button>
+            </form>
+            <div id="form-message"></div> <!-- Message display area -->
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Yehuntech. All rights reserved.</p>
+            <p>Address: Addis Ababa, Ethiopia</p>
+            <p class="trademark">Trademark &reg; Yehuntech</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

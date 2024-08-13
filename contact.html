@@ -9,7 +9,7 @@
 <body>
     <header>
         <div class="container">
-            <h1 href="index.html">Yehuntech</h1>
+            <h1>Yehuntech</h1>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -22,10 +22,10 @@
     </header>
 
     <section id="contact">
-        <div class="container">
+        <div class="contact-container">
             <h1>Contact Us</h1>
             <p>We'd love to hear from you! Please fill out the form below, and we'll get back to you as soon as possible.</p>
-            <form id="contact-form">
+            <form id="contact-form" action="https://formspree.io/f/mdkngdne" method="POST">
                 <input type="text" id="name" name="name" placeholder="Name" required>
                 <input type="email" id="email" name="email" placeholder="Email" required>
                 <textarea id="message" name="message" rows="4" placeholder="Message" required></textarea>
@@ -40,8 +40,38 @@
             <p>&copy; 2024 Yehuntech. All rights reserved.</p>
             <p>Address: Addis Ababa, Ethiopia</p>
             <p class="trademark">Trademark &reg; Yehuntech</p>
+            <p>
+                <a href="https://www.linkedin.com/company/yehuntech" target="_blank" class="footer-link">Connect with us on LinkedIn</a>
+            </p>
         </div>
     </footer>
-    <script src="scripts.js"></script>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            var form = event.target;
+            var formData = new FormData(form);
+
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+            })
+            .then(response => {
+                if (response.ok) {
+                    return response.text(); // Get the response body as text
+                } else {
+                    throw new Error('Network response was not ok.');
+                }
+            })
+            .then(() => {
+                document.getElementById('form-message').innerText = 'Thank you! We\'ll get back to you soon.';
+                form.reset();
+            })
+            .catch(error => {
+                console.error('Error:', error); // Log the error for debugging
+                document.getElementById('form-message').innerText = 'There was an issue with your submission. Please try again.';
+            });
+        });
+    </script>
 </body>
 </html>
